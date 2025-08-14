@@ -1,20 +1,28 @@
-public class ItemVenda extends Produto{
-    private int quantidade;
-    private Produto produto;
-    ItemVenda(int quantidade, Produto produto){
-        this.produto = produto;
-        this.quantidade = quantidade;
-    }
-    public void setQuantidade(int quantidade){
-        this.quantidade = quantidade;
-    }
-    public int getQuantidade(){
-        return quantidade;
-    }
-    public float getSubTotal(){
-        return produto.getPreco() * getQuantidade();
-    }
-    public Produto getProduto(){
-        return produto;
-    }
+
+public class ItemVenda {
+	private int quantidade;
+	private Produto produto;
+	private double subtotal; 
+	
+	public ItemVenda(int quantidade, Produto produto){
+		this.quantidade = quantidade;
+		this.produto = produto;
+	}
+	
+	
+	public int getQuantidade() {
+		return quantidade;
+	}
+
+	
+	public Produto getProduto() {
+		return produto;
+	}
+	
+	public double calcularSubTotal(){
+		subtotal = 0;
+		subtotal = quantidade * produto.getPreco();
+		return subtotal;
+	}
+	
 }
