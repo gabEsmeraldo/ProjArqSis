@@ -14,7 +14,7 @@ public class GUIVenda {
 		controladorVenda.entrarItem("003", 2);
 		
 		//simplificacao. Botao da GUI foi clicado para efetuar pagamento e valor em dinheiro fornecido
-		controladorVenda.registrarPagamento(500.00, 3);
+		controladorVenda.registrarPagamento(500.00, 2);
 		
 		System.out.println("Total = " + venda.getTotal());
 		System.out.println("Troco = " + venda.getTroco());

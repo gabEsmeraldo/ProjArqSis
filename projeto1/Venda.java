@@ -40,21 +40,8 @@ public class Venda {
 	}
 	
 	public void efetuarPagamento(double valorRecebido, int metodoPagamento){
-		//pagamento = new Pagamento(valorRecebido);
-		switch(metodoPagamento) {
-			case 1:
-				pagamento = new Pagamento(valorRecebido);
-				break;
-			case 2:
-				pagamento = new PagamentoCartao(valorRecebido);
-				break;
-			case 3:
-				pagamento = new PagamentoPix(valorRecebido);
-				break;
-			case 4:
-				pagamento = new PagamentoCheque(valorRecebido);
-				break;
-		}
+		FactoryPagamento factoryPagamento = new FactoryPagamento();
+		pagamento = factoryPagamento.getInstance(metodoPagamento, valorRecebido);
 		pagamento.autorizar();
 	}
 	
