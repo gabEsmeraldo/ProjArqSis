@@ -41,7 +41,7 @@ public class Venda {
 	
 	public void efetuarPagamento(double valorRecebido, int metodoPagamento){
 		FactoryPagamento factoryPagamento = new FactoryPagamento();
-		pagamento = factoryPagamento.getInstance(metodoPagamento, valorRecebido);
+		pagamento = factoryPagamento.obterFormaPagamento(metodoPagamento, valorRecebido);
 		pagamento.autorizar();
 	}
 	

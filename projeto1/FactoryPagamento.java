@@ -1,7 +1,7 @@
 public class FactoryPagamento {
     public FactoryPagamento(){
     }
-    public Pagamento getInstance(int metodoPagamento, double valorRecebido){
+    public Pagamento obterFormaPagamento(int metodoPagamento, double valorRecebido){
         Pagamento pagamento;
         switch(metodoPagamento) {
 			default:
